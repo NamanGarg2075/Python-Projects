@@ -33,4 +33,4 @@ while True:
 
 print(f"You won {user_win} times")
 print(f"Computer won {comp_win} times")
-print("Bye")
+print("To play again run program again")
