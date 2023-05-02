@@ -1,9 +1,10 @@
 
 all_users = []
-all_name = []
-all_pass = []
 
-obj = [all_name,all_users,all_pass]
+sign_options = input("For login type (L)\
+                     For register type (R): ")
+
+
 
 class UserDetails:
     def __init__(self,name,username,password,hint="0"):
@@ -11,24 +12,24 @@ class UserDetails:
         self.username = username
         self.password = password
         self.hint = hint
-        all_name.append(self.name)
+        # all_name.append(self.name)
         all_users.append(self.username)
-        all_pass.append(self.password)
-        print("Created")
+        # all_pass.append(self.password)
 
 class Login():
-    pass
+    def __init__(self):
+        print("YO")
 
-class Register():
-    pass
-
-for i in range(1,3):
-    obj_name = input("name of object")
-    obj_username = input("username of object")
-    obj_pass = input("password of object")
-
-    object = UserDetails(obj_name,obj_pass,obj_username)
+class Register:
+    def __init__(self):
+        self.name = input("NAME")
+        self.username = input("username")
+        self.password = input("password")
 
 
-for i in obj:
-    print(i)
+if sign_options.lower() == "l":
+    Login()
+elif sign_options.lower() == "r":
+    Register()
+else:
+    print("USER NOT FOUND!!!")
